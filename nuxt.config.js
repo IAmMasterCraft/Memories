@@ -10,7 +10,7 @@ export default {
     title: 'Memories',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
@@ -35,6 +35,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxt-hero-icons/outline/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -51,7 +52,19 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      name: "DevFest Memories",
+      short_name: "Memories",
+      description: "Memories for DevFest",
+      lang: "en"
+    },
+    meta: {
+      name: "DevFest Memories",
+      author: "MasterCraft",
+      description: "Memories for DevFest",
+      nativeUI: true,
+      appleStatusBarStyle: "black-translucent",
+      mobileApp: true,
+      mobileAppIOS: true
     }
   },
 
